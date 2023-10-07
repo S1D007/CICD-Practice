@@ -37,7 +37,7 @@ app.get('/todo', function (req, res) {
         // Escapes HTML special characters in attribute values as HTML entities
         let newTodo = sanitizer.escape(req.body.newtodo);
         if (req.body.newtodo != '') {
-            todolist.push(newTodo);
+            todolist.push(`${newTodo} + Jenkins`);
         }
         res.redirect('/todo');
     })
